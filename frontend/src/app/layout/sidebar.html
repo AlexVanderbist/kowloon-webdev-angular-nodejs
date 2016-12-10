@@ -1,34 +1,71 @@
-<nav class='sidebar sidebar-menu-collapsed'>
-  <a href='#' id='justify-icon'>
-    <span class='glyphicon glyphicon-align-justify'></span>
+<nav class="sidebar" ng-init="menuState = 0" ng-class="menuState ? 'sidebar-menu-expanded' : 'sidebar-menu-collapsed'">
+  <a href="#" id="toggle-icon" ng-click="menuState = !menuState">
+    <span class="icon-menu"></span>
   </a>
-  <ul>
-    <li class='active'>
-      <a class='expandable' href='#' title='Dashboard'>
-        <!--<span class='glyphicon glyphicon-home collapsed-element'></span>-->
-        <span class='expanded-element'>Dashboard</span>
+  <ul class="main">
+    <li class="xactive">
+      <a href="#" title="Search">
+        <span class="icon-search"></span>
+        Search
       </a>
     </li>
     <li>
-      <a class='expandable' href='#' title='APIs'>
-        <!--<span class='glyphicon glyphicon-wrench collapsed-element'></span>-->
-        <span class='expanded-element'>APIs</span>
+      <a href="#" title="FAQ">
+        <span class="icon-faq"></span>
+        FAQ
       </a>
     </li>
+    <li class="divider"></li>
     <li>
-      <a class='expandable' href='#' title='Settings'>
-        <!--<span class='glyphicon glyphicon-cog collapsed-element'></span>-->
-        <span class='expanded-element'>Settings</span>
+      <a href="#" title="Contact">
+        <span class="icon-contact"></span>
+        Contact
       </a>
     </li>
-    <li>
-      <a class='expandable' href='#' title='Account'>
-        <!--<span class='glyphicon glyphicon-user collapsed-element'></span>-->
-        <span class='expanded-element'>Account</span>
+    <li class="divider"></li>
+  </ul>
+
+  <ul class="categories">
+    <li class="active dogs">
+      <a href="#" title="Dogs">
+        <span class="icon-dogs"></span>
+        Dogs
+      </a>
+    </li>
+    <li class="cats">
+      <a href="#" title="Cats">
+        <span class="icon-cats"></span>
+        Cats
+      </a>
+    </li>
+    <li class="fish">
+      <a href="#" title="Fish">
+        <span class="icon-fish"></span>
+        Fish
+      </a>
+    </li>
+    <li class="birds">
+      <a href="#" title="Birds">
+        <span class="icon-birds"></span>
+        Birds
+      </a>
+    </li>
+    <li class="small_animals">
+      <a href="#" title="Small animals">
+        <span class="icon-small_animals"></span>
+        Small animals
+      </a>
+    </li>
+    <li class="other">
+      <a href="#" title="Other">
+        <span class="icon-plus"></span>
+        Other
       </a>
     </li>
   </ul>
-  <a href='#' id='logout-icon' title='Logout'>
-    <span class='glyphicon glyphicon-off'></span>
+
+  <a href="#" id="logo-icon" title="Home">
+    <span class="icon-k"></span>
+    <img src="images/logo-sm.svg" class="expanded" alt="">
   </a>
 </nav>

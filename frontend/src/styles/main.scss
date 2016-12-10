@@ -1,3 +1,41 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 
-@import "src/app/layout/sidebar";
+@import "_kowloon-icons";
+
+$backgroundColor: #454545;
+
+$sidebarBg: #323232;
+$sidebarBgDark: #252525;
+$sidebarInactive: #a2a2a2;
+$sidebarActive: #ededed;
+$sidebarActiveDark: #363636;
+
+$dogColor: #ff6f9e;
+$catColor: #8787ff;
+$fishColor: #ffb93f;
+$owlColor: #7bff81;
+$mouseColor: #7be5ff;
+$otherColor: #de6262;
+
+$categories: dogs, cats, fish, birds, small_animals, other;    
+$category_colors: $dogColor, $catColor, $fishColor, $owlColor, $mouseColor, $otherColor;
+
+$sidebarWidth: 60px;
+$sidebarExpandedWidth: 217px;
+$sidebarMenuItemHeight: 52px;
+
+
+body, html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $backgroundColor;
+  padding-left: $sidebarWidth;
+}
+
+@import "layout/_sidebar";
