@@ -1,3 +1,15 @@
+<div class="jumbotron">
+    <div class="logo">
+        <img src="images/logo.svg" alt="Kowloon">
+    </div>
+    <div uib-carousel active="home.active" interval="5000">
+        <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="margin:auto; height:480px;">
+        </div>
+    </div>
+</div>
+
+
 <h1>HONEY IM HOME</h1>
 <h2>{{home.test}}</h2>
 <h3>{{home.svcTest}}</h3>
