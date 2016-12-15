@@ -1,8 +1,10 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 
 @import "_kowloon-icons";
+@import "_fonts";
 
 $backgroundColor: #454545;
+$textColor: #cecece;
 
 $sidebarBg: #323232;
 $sidebarBgDark: #252525;
@@ -17,8 +19,16 @@ $owlColor: #7bff81;
 $mouseColor: #7be5ff;
 $otherColor: #de6262;
 
-$categories: dogs, cats, fish, birds, small_animals, other;    
+$categories: dogs, cats, fish, birds, small_animals, other;
 $category_colors: $dogColor, $catColor, $fishColor, $owlColor, $mouseColor, $otherColor;
+
+$i: 1;
+@each $class in $categories {
+  .kowicon-#{$class} {
+    color: nth($category_colors, $i);
+  }
+  $i: $i+1;
+}
 
 $sidebarWidth: 60px;
 $sidebarExpandedWidth: 217px;
@@ -36,6 +46,9 @@ body, html {
 body {
   background-color: $backgroundColor;
   padding-left: $sidebarWidth;
+  color: $textColor;
+  line-height: 1.7em;
 }
 
 @import "layout/_sidebar";
+@import "home/_home";

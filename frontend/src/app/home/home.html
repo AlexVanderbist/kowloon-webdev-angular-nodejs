@@ -1,26 +1,54 @@
 <div class="jumbotron">
-    <div class="logo">
-        <img src="images/logo.svg" alt="Kowloon">
-    </div>
-    <div uib-carousel active="home.active" interval="5000">
-        <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id">
-            <img ng-src="{{slide.image}}" style="margin:auto; height:480px;">
-        </div>
-    </div>
+  <div class="logo">
+    <img src="images/logo.svg" alt="Kowloon">
+  </div>
+  <div uib-carousel active="home.active" interval="5000">
+    <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id" style="height: 480px; background-size:cover; background-position:center;"
+      ng-style="{backgroundImage: 'url('+slide.image+')'}"></div>
+  </div>
 </div>
 
-
-<h1>HONEY IM HOME</h1>
-<h2>{{home.test}}</h2>
-<h3>{{home.svcTest}}</h3>
 <div class="container">
-    <div class="well">
-        Bootstrap works!
-    </div>
+  <p class="intro">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 
-    <h4>Single toggle</h4>
-    <pre>{{singleModel}}</pre>
-    <button type="button" class="btn btn-primary" ng-model="singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-        Single Toggle
-    </button>
+  <div class="row categories">
+    <div class="col-sm-2 col-xs-4">
+      <a href="#">
+        <span class="kowicon-dogs"></span>
+        Dogs
+      </a>
+    </div>
+    <div class="col-sm-2 col-xs-4">
+      <a href="#">
+        <span class="kowicon-cats"></span>
+        Cats
+      </a>
+    </div>
+    <div class="col-sm-2 col-xs-4">
+      <a href="#">
+        <span class="kowicon-fish"></span>
+        Fish
+      </a>
+    </div>
+    <div class="col-sm-2 col-xs-4">
+      <a href="#">
+        <span class="kowicon-birds"></span>
+        Birds
+      </a>
+    </div>
+    <div class="col-sm-2 col-xs-4">
+      <a href="#">
+        <span class="kowicon-small_animals"></span>
+        Small animals
+      </a>
+    </div>
+    <div class="col-sm-2 col-xs-4">
+      <a href="#">
+        <span class="kowicon-plus"></span>
+        Other
+      </a>
+    </div>
+  </div>
 </div>
