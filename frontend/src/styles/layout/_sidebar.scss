@@ -17,6 +17,9 @@ nav.sidebar {
   &.sidebar-menu-expanded {
     width: $sidebarExpandedWidth;
     transition: width 300ms;
+    .collapsed {
+      display: none;
+    }
   }
   a#toggle-icon {
     display: block;
@@ -40,7 +43,7 @@ nav.sidebar {
     left: 18px;
     img {
       position: absolute;
-      bottom: 10px;
+      bottom: 4px;
       left: 0;
     }
   }

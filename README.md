@@ -13,6 +13,7 @@ Log
 - 30/11/2016: Added Angular project structure (LIFT & Folders by feature) and build tools
 - 01/12/2016: Added Bootstrap and Bootstrap-UI
 - 04/12/2016: Added sidebar
+- xx/12/2016: Added image slider and homepage categories
 
 
 
