@@ -48,6 +48,7 @@ body {
   padding-left: $sidebarWidth;
   color: $textColor;
   line-height: 1.7em;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -56,6 +57,14 @@ h1 {
   font-weight: bold;
 }
 
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @import "layout/_sidebar";
 @import "home/_home";
+@import "general/_product-grid";
 @import "general/_product";

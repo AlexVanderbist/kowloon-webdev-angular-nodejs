@@ -1,0 +1,14 @@
+.product-grid {
+  .bottom-links {
+    text-align: right;
+    font-weight: bold;
+    font-family: 'choplin', serif;
+    a {
+      text-decoration: underline;
+      color: #e8e8e8;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
