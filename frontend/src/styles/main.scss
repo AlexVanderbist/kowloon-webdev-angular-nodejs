@@ -50,5 +50,12 @@ body {
   line-height: 1.7em;
 }
 
+h1 {
+  text-transform: uppercase;
+  font-family: 'choplin', serif;
+  font-weight: bold;
+}
+
 @import "layout/_sidebar";
 @import "home/_home";
+@import "general/_product";

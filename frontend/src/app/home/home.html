@@ -3,52 +3,137 @@
     <img src="images/logo.svg" alt="Kowloon">
   </div>
   <div uib-carousel active="home.active" interval="5000">
-    <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id" style="height: 480px; background-size:cover; background-position:center;"
-      ng-style="{backgroundImage: 'url('+slide.image+')'}"></div>
-  </div>
+    <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id" style="height: 480px; background-size:cover; background-position:center;" ng-style="{backgroundImage: 'url('+slide.image+')'}"></div>
+</div>
 </div>
 
 <div class="container">
   <p class="intro">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna Duis
+    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 
   <div class="row categories">
     <div class="col-sm-2 col-xs-4">
       <a href="#">
-        <span class="kowicon-dogs"></span>
-        Dogs
+        <span class="kowicon-dogs"></span> Dogs
       </a>
     </div>
     <div class="col-sm-2 col-xs-4">
       <a href="#">
-        <span class="kowicon-cats"></span>
-        Cats
+        <span class="kowicon-cats"></span> Cats
       </a>
     </div>
     <div class="col-sm-2 col-xs-4">
       <a href="#">
-        <span class="kowicon-fish"></span>
-        Fish
+        <span class="kowicon-fish"></span> Fish
       </a>
     </div>
     <div class="col-sm-2 col-xs-4">
       <a href="#">
-        <span class="kowicon-birds"></span>
-        Birds
+        <span class="kowicon-birds"></span> Birds
       </a>
     </div>
     <div class="col-sm-2 col-xs-4">
       <a href="#">
-        <span class="kowicon-small_animals"></span>
-        Small animals
+        <span class="kowicon-small_animals"></span> Small animals
       </a>
     </div>
     <div class="col-sm-2 col-xs-4">
       <a href="#">
-        <span class="kowicon-plus"></span>
-        Other
+        <span class="kowicon-plus small"></span> Other
       </a>
     </div>
   </div>
-</div>
+
+  <h1>Hot items.</h1>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="product multiple-images">
+        <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          <div class="overlay">
+            <span class="kowicon-product"></span>
+            view details
+          </div>
+          <div class="photo-count">
+            4
+          </div>
+        </div>
+        <div class="information">
+          <a href="#" class="title">
+            Cooling mat
+          </a>
+          <span class="price">&euro; 15,49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product">
+        <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          <div class="overlay">
+            <span class="kowicon-product"></span>
+            view details
+          </div>
+          <ul class="colors">
+            <li style="background: white;">White</li>
+            <li style="background: black;">Black</li>
+            <li style="background: blue;">Blue</li>
+          </ul>
+        </div>
+        <div class="information">
+          <a href="#" class="title">
+            Cooling mat
+          </a>
+          <span class="price">&euro; 15,49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product">
+        <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          <div class="overlay">
+            <span class="kowicon-product"></span>
+            view details
+          </div>
+          <ul class="colors">
+            <li style="background: white;">White</li>
+            <li style="background: black;">Black</li>
+            <li style="background: blue;">Blue</li>
+          </ul>
+        </div>
+        <div class="information">
+          <a href="#" class="title">
+            Cooling mat
+          </a>
+          <span class="price">&euro; 15,49</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product">
+        <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          <div class="overlay">
+            <span class="kowicon-product"></span>
+            view details
+          </div>
+          <ul class="colors">
+            <li style="background: white;">White</li>
+            <li style="background: black;">Black</li>
+            <li style="background: blue;">Blue</li>
+          </ul>
+        </div>
+        <div class="information">
+          <a href="#" class="title">
+            Cooling mat
+          </a>
+          <span class="price">&euro; 15,49</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- container-end -->

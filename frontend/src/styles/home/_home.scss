@@ -42,6 +42,7 @@ p.intro {
   text-align: center;
   padding-left: 14%;
   padding-right: 14%;
+  margin-bottom: 40px;
 }
 
 .categories {
@@ -49,7 +50,7 @@ p.intro {
     text-align: center;
     display: block;
     color: #fff;
-    font-family: 'choplinextralight', serif;
+    font-family: 'choplin', serif;
     text-transform: uppercase;
     font-size: 1.3em;
     span {
@@ -57,6 +58,9 @@ p.intro {
       width: 100%;
       font-size: 70px;
       margin-bottom: 17px;
+      &.small {
+        transform: scale(0.6);
+      }
     }
     &:after {
       content: "";
