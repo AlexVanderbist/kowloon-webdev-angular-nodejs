@@ -1,5 +1,5 @@
 nav.sidebar {
-  z-index: 10;
+  z-index: 200;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -72,9 +72,8 @@ nav.sidebar {
       li {
         a {
           color: #fff;
-          transition: transform 200ms;
-          &:hover span {
-            transform: scale(1.1);
+          span {
+            color: inherit;
           }
         }
         
