@@ -5,8 +5,9 @@
 
 $backgroundColor: #454545;
 $textColor: #cecece;
+$darkColor: #323232;
 
-$sidebarBg: #323232;
+$sidebarBg: $darkColor;
 $sidebarBgDark: #252525;
 $sidebarInactive: #a2a2a2;
 $sidebarActive: #ededed;
@@ -52,15 +53,35 @@ body {
 }
 
 h1 {
-  text-transform: uppercase;
   font-family: 'choplin', serif;
   font-weight: bold;
+  color: #fff;
 }
 
 a {
   color: inherit;
   &:hover {
     text-decoration: none;
+  }
+}
+
+input.form-control {
+  border-radius: 0;
+  border: 2px solid #9a9a9a;
+}
+
+.btn {
+  border-radius: 0;
+  border: 2px solid;
+  &.btn-dark {
+    color: #fff;
+    background-color: $darkColor;
+    border-color: $darkColor;
+    text-transform: uppercase;
+    &:hover {
+      background-color: lighten($darkColor, 5);
+      border-color: lighten($darkColor, 5);
+    }
   }
 }
 

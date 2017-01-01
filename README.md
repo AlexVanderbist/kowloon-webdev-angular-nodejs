@@ -15,6 +15,7 @@ Log
 - 04/12/2016: Added sidebar
 - xx/12/2016: Added image slider and homepage categories
 - 26/12/2016: Added featured products on homepage
+- 01/12/2017: Finished newsletter form
 
 
 
