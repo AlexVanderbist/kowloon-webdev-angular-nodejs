@@ -72,7 +72,13 @@ nav.sidebar {
       li {
         a {
           color: #fff;
+          transition: transform 200ms;
+          &:hover span {
+            transform: scale(1.1);
+          }
         }
+        
+        // Change text color on hover
         $i: 1;
         @each $class in $categories {
           &.#{$class} {
