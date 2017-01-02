@@ -58,10 +58,8 @@ nav.sidebar {
           &:hover {
             color: $sidebarActive;
           }
-        }
-        &.active {
-          background-color: $sidebarActive;
-          a {
+          &.active {
+            background-color: $sidebarActive;
             color: $sidebarActiveDark;
           }
         }
@@ -81,7 +79,7 @@ nav.sidebar {
         $i: 1;
         @each $class in $categories {
           &.#{$class} {
-            &.active a,
+            a.active,
             a:hover {
               color: nth($category_colors, $i);
             }

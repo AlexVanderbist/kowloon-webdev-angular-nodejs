@@ -3,8 +3,8 @@
     <span class="kowicon-menu"></span>
   </a>
   <ul class="main">
-    <li class="xactive">
-      <a href="#" title="Search">
+    <li>
+      <a ui-sref="app.search" ui-sref-active="active" title="Search">
         <span class="kowicon-search"></span>
         Search
       </a>
@@ -26,8 +26,8 @@
   </ul>
 
   <ul class="categories">
-    <li class="active dogs">
-      <a href="#" title="Dogs">
+    <li class="dogs">
+      <a href="#" class="active" title="Dogs">
         <span class="kowicon-dogs"></span>
         Dogs
       </a>
@@ -64,7 +64,7 @@
     </li>
   </ul>
 
-  <a href="#" id="logo-icon" title="Home">
+  <a ui-sref="app" id="logo-icon" title="Home">
     <span class="kowicon-k collapsed"></span>
     <img src="images/logo-sm.svg" class="expanded" alt="">
   </a>

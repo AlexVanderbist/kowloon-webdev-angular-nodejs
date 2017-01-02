@@ -1,3 +1,11 @@
+<div class="fs-overlay" ng-show="$state.current.name != 'app'">
+  <a ui-sref="app" class="overlay-close">
+    X
+    <span>esc</span>
+  </a>
+  <ui-view autoscroll></ui-view>
+</div>
+
 <div class="jumbotron">
   <div class="logo">
     <img src="images/logo.svg" alt="Kowloon">
@@ -156,12 +164,13 @@
         <h2>Subscribe to our newsletter</h2>
         <p>Lorum ipsum dolor sit amet.</p>
         
-        <div class="input-group">
+        <div class="input-group input-group-lg">
           <input type="text" class="form-control" placeholder="Name @ domain.com">
           <span class="input-group-btn">
             <button class="btn btn-dark" type="button">OK</button>
           </span>
         </div>
+
       </div> 
     </div>
   </div>

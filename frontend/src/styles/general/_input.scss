@@ -1,0 +1,66 @@
+.form-control {
+  border-radius: 0;
+  border: 2px solid $lightColor;
+  outline: none;
+  box-shadow: none;
+}
+
+.input-group-lg {
+  .input-group-addon {
+    padding-top: 9px;
+  }
+  .form-control {
+    border-radius: 0;
+  }
+  .input-group-addon {
+    border-radius: 0;
+  }
+}
+
+.slider {
+  .slider-handle {
+    background: none;
+    background-color: $darkColor;
+    border: none;
+    box-shadow: none;
+  }
+  &.slider-horizontal .slider-track {
+    height: 6px;
+    margin-top: -3px;
+    .slider-selection,
+    .slider-track-low,
+    .slider-track-high {
+      background: none;
+      background-color: lighten($darkColor, 50);
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+input[type=checkbox] {
+  border: 2px solid $darkColor;
+}
+
+.btn,
+.input-group-lg .input-group-btn .btn {
+  border-radius: 0;
+  border: 2px solid;
+  &.btn-dark {
+    color: #fff;
+    background-color: $darkColor;
+    border-color: $darkColor;
+    text-transform: uppercase;
+    &:hover {
+      background-color: lighten($darkColor, 5);
+      border-color: lighten($darkColor, 5);
+    }
+  }
+}
+
+.input-group-addon {
+  background: none;
+  border: 2px solid $lightColor;
+  border-radius: 0;
+  box-shadow: none;
+}

@@ -12,5 +12,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       templateUrl: 'app/home/home.html',
       controller: 'HomeController as home'
+    })
+    .state('app.search', {
+      url: 'search',
+      templateUrl: 'app/search/search.html',
+      controller: 'SearchController as search'
     });
 }

@@ -6,12 +6,16 @@
 $backgroundColor: #454545;
 $textColor: #cecece;
 $darkColor: #323232;
+$lightColor: #9a9a9a;
 
 $sidebarBg: $darkColor;
 $sidebarBgDark: #252525;
 $sidebarInactive: #a2a2a2;
 $sidebarActive: #ededed;
 $sidebarActiveDark: #363636;
+
+$overlayBg: #fff;
+$overlayAccent: #e27500;
 
 $dogColor: #ff6f9e;
 $catColor: #8787ff;
@@ -52,6 +56,41 @@ body {
   padding-bottom: 50px;
 }
 
+.fs-overlay {
+  z-index: 199;
+  background-color: transparentize($overlayBg, 0.05);
+  position: fixed;
+  top: 0;
+  left: $sidebarWidth;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  height: 100%;
+
+  .overlay-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 201;
+    text-align: center;
+    font-size: 3em;
+    font-weight: normal;
+    color: lighten($darkColor, 40);
+    span {
+      display: block;
+      font-size: 0.5em;
+    }
+    &:hover {
+      color: lighten($darkColor, 20);
+    }
+  }
+  
+  color: $darkColor;
+  h1 {
+    color: $darkColor;
+  }
+}
+
 h1 {
   font-family: 'choplin', serif;
   font-weight: bold;
@@ -65,27 +104,23 @@ a {
   }
 }
 
-input.form-control {
-  border-radius: 0;
-  border: 2px solid #9a9a9a;
+.glyph-flipped {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
 }
 
-.btn {
+.well {
+  border: none;
   border-radius: 0;
-  border: 2px solid;
-  &.btn-dark {
-    color: #fff;
-    background-color: $darkColor;
-    border-color: $darkColor;
-    text-transform: uppercase;
-    &:hover {
-      background-color: lighten($darkColor, 5);
-      border-color: lighten($darkColor, 5);
-    }
-  }
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+@import "general/_input";
 @import "layout/_sidebar";
 @import "home/_home";
 @import "general/_product-grid";
 @import "general/_product";
+@import "search/_search";
