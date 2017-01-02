@@ -17,5 +17,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: 'search',
       templateUrl: 'app/search/search.html',
       controller: 'SearchController as search'
+    })
+    .state('app.faq', {
+      url: 'faq',
+      templateUrl: 'app/faq/faq.html',
+      controller: 'FaqController as faq'
     });
 }

@@ -87,7 +87,8 @@ body {
   
   color: $darkColor;
   h1 {
-    color: $darkColor;
+    color: $overlayAccent;
+    text-transform: uppercase;
   }
 }
 
@@ -98,9 +99,11 @@ h1 {
 }
 
 a {
+  text-decoration: underline;
   color: inherit;
   &:hover {
     text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -123,4 +126,6 @@ a {
 @import "home/_home";
 @import "general/_product-grid";
 @import "general/_product";
+@import "general/_big-search";
 @import "search/_search";
+@import "_faq";

@@ -1,0 +1,32 @@
+<div class="container faq">
+  <h1>Frequently asked questions</h1>
+
+  <div class="big-search big-search-dark">
+    <div class="input-group input-group-lg search">
+      <div class="input-group-addon ">
+        <span class="glyphicon glyphicon-search glyph-flipped" aria-hidden="true"></span>
+      </div>
+      <div class="placeholder" ng-hide="searchQuery">
+        Search on keyword <span class="kowicon kowicon-enter"></span>
+      </div>
+      <input type="text" ng-model="searchQuery" autofocus esc-key="$state.go('app')" class="form-control">
+    </div>
+    <a href="#" ng-click="searchQuery=''" ng-show="searchQuery" class="pull-right">
+      <span class="glyphicon glyphicon-remove"></span> Clear
+    </a>
+  </div>
+
+  <p>
+    Don’t find what you’re looking for?<br>
+    You can always contact our <a ui-sref="contact">customer service</a>. We’re happy to help you!
+  </p>
+  
+  <div class="faq-questions">
+    <div class="well well-lg" ng-repeat="question in faq.faqs">
+      <h2>{{question.title}}</h2>
+      <p>
+        {{question.content}}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.big-search {
+  margin: 40px 0;
+  .input-group {
+    &>*:not(.placeholder) {
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid $darkColor;
+    }
+    .placeholder {
+      color: $overlayAccent;
+      font-weight: bold;
+      font-size: 2.8em;
+      position: absolute;
+      top: 10px;
+      margin-left: 20px;
+      span {
+        color: $darkColor;
+        position: relative;
+        top: 0.2em;
+      }
+    }
+    .input-group-addon {
+      font-size: 2.2em;
+    }
+    .form-control {
+      height: auto;
+      font-size: 2.8em;
+    }
+  }
+}
+
+.big-search.big-search-dark {
+  .form-control,
+  .placeholder,
+  .input-group-addon {
+    color: #535353;
+    font-weight: normal;
+  }
+}

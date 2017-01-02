@@ -1,37 +1,39 @@
 <div class="container">
-  <h2 ng-click="advancedSearchCollapsed = !advancedSearchCollapsed" ng-init="advancedSearchCollapsed = false" class="advanced-search-toggle">
-    Advanced filter
-    <small>
+  <div class="filter">
+    <h2 ng-click="advancedSearchCollapsed = !advancedSearchCollapsed" ng-init="advancedSearchCollapsed = true" class="advanced-search-toggle">
+      Advanced filter
+      <small>
       <span class="glyphicon glyphicon-triangle-bottom" ng-hide="advancedSearchCollapsed" aria-hidden="true"></span>
       <span class="glyphicon glyphicon-triangle-right" ng-hide="!advancedSearchCollapsed" aria-hidden="true"></span>
     </small>
-  </h2>
-  <div uib-collapse="advancedSearchCollapsed">
-    <div class="row">
-      <div class="col-md-6">
-        <h3>Category</h3>
-        <label class="checkbox-inline" ng-repeat="category in search.categories">
+    </h2>
+    
+    <div uib-collapse="advancedSearchCollapsed">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Category</h3>
+          <label class="checkbox-inline" ng-repeat="category in search.categories">
           <input type="checkbox" value="{{category}}"> {{category}}
         </label>
-      </div>
-      <div class="col-md-6 price-range">
-        <h3>Price range</h3>
-        <slider ng-model="search.price" range="true" min="0" step="1" tooltip="hide" max="500" value="testOptions.value"></slider>
-
-        <div class="row">
-          <div class="col-md-5">
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon">&euro;</span>
-              <input type="text" ng-model="search.price[0]" ng-value="search.price[0] | number : 2" class="form-control">
+        </div>
+        <div class="col-md-6 price-range">
+          <h3>Price range</h3>
+          <slider ng-model="search.price" range="true" min="0" step="1" tooltip="hide" max="500" value="testOptions.value"></slider>
+          <div class="row">
+            <div class="col-md-5">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon">&euro;</span>
+                <input type="text" ng-model="search.price[0]" ng-value="search.price[0] | number : 2" class="form-control">
+              </div>
             </div>
-          </div>
-          <div class="col-md-2 text-center">
-            <p class="h4">-</p>
-          </div>
-          <div class="col-md-5">
-            <div class="input-group input-group-lg">
-              <span class="input-group-addon">&euro;</span>
-              <input type="text" ng-model="search.price[1]" ng-value="search.price[0] | number : 2" class="form-control">
+            <div class="col-md-2 text-center">
+              <p class="h4">-</p>
+            </div>
+            <div class="col-md-5">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon">&euro;</span>
+                <input type="text" ng-model="search.price[1]" ng-value="search.price[0] | number : 2" class="form-control">
+              </div>
             </div>
           </div>
         </div>
@@ -39,23 +41,30 @@
     </div>
   </div>
 
-  <div class="input-group input-group-lg search">
-    <div class="input-group-addon ">
-      <span class="glyphicon glyphicon-search glyph-flipped" aria-hidden="true"></span>
+  <div class="big-search">
+    <div class="input-group input-group-lg search">
+      <div class="input-group-addon ">
+        <span class="glyphicon glyphicon-search glyph-flipped" aria-hidden="true"></span>
+      </div>
+      <div class="placeholder" ng-hide="searchQuery">
+        Just start typing and hit <span class="kowicon kowicon-enter"></span> to search
+      </div>
+      <input type="text" ng-model="searchQuery" autofocus esc-key="$state.go('app')" class="form-control">
     </div>
-    <div class="placeholder" ng-hide="searchQuery">
-      Just start typing and hit <span class="kowicon kowicon-enter"></span> to search
-    </div>
-    <input type="text" ng-model="searchQuery" class="form-control">
+    <a href="#" ng-click="searchQuery=''" ng-show="searchQuery" class="pull-right">
+      <span class="glyphicon glyphicon-remove"></span> Clear
+    </a>
   </div>
 
-  <div class="results">
-    <a href="#" ng-click="searchQuery=''" class="clear">
-      <span class="glyphicon glyphicon-remove"></span>
-      Clear
-    </a>
+  <div class="results" ng-show="searchQuery">
     <p>{{search.results.length || 0}} results for "{{searchQuery}}"</p>
-
     <div class="well" ng-repeat="product in search.results"></div>
+  </div>
+
+  <div ng-show="search.results.length == 0" class="no-results">
+    <p>
+      Try checking spelling or tweaking it. Maybe use fewer words or a more general search term.<br/> If you still have
+      no luck you can contact our Customer service.
+    </p>
   </div>
 </div>
