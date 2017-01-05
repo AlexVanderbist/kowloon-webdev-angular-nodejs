@@ -9,9 +9,17 @@ angular
 
 angular
   .module('app')
-  .run(function ($rootScope, $state, $stateParams) {
+  .run(function ($rootScope, $state, $stateParams, $window, $location) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+
+    // Init Goolge Analytics
+    $window.ga('create', 'UA-89881605-1', 'auto');
+
+    // track pageview on state change
+    $rootScope.$on('$stateChangeSuccess', function (event) {
+      $window.ga('send', 'pageview', $location.path());
+    });
 
     // Catch statechange to hide scrollbars when overlay is active
     $rootScope.$on('$stateChangeStart',
@@ -40,14 +48,14 @@ angular.module('app')
     };
   })
   .directive('autofocus',
-    function ($timeout) {
-      return {
-        restrict: 'A',
-        link: function ($scope, $element) {
-          $timeout(function () {
-            $element[0].focus();
-          });
-        }
-      };
-    }
+  function ($timeout) {
+    return {
+      restrict: 'A',
+      link: function ($scope, $element) {
+        $timeout(function () {
+          $element[0].focus();
+        });
+      }
+    };
+  }
   );
