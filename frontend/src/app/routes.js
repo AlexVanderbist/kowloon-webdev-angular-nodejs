@@ -22,5 +22,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: 'faq',
       templateUrl: 'app/faq/faq.html',
       controller: 'FaqController as faq'
+    })
+    .state('category', {
+      url: '/category',
+      templateUrl: 'app/category/category.html',
+      controller: 'CategoryController as category'
     });
 }

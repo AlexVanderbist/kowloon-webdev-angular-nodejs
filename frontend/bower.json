@@ -6,7 +6,7 @@
     "angular-ui-router": "^0.3.2",
     "bootstrap-sass": "^3.3.7",
     "angular-bootstrap": "^2.3.0",
-    "angular-animate": "^1.6.0",
+    "angular-animate": "^1.6.1",
     "angular-touch": "^1.6.0",
     "angular-bootstrap-slider": "^0.1.28",
     "seiyria-bootstrap-slider": "^9.5.4"
@@ -15,7 +15,7 @@
     "angular-mocks": "^1.5.0"
   },
   "resolutions": {
-    "angular": "^1.5.0",
+    "angular": "1.6.1",
     "seiyria-bootstrap-slider": "^9.5.4"
   }
 }

@@ -6,14 +6,7 @@
   <ui-view autoscroll></ui-view>
 </div>
 
-<div class="jumbotron">
-  <div class="logo">
-    <img src="images/logo.svg" alt="Kowloon">
-  </div>
-  <div uib-carousel active="home.active" interval="5000">
-    <div uib-slide ng-repeat="slide in home.slides track by slide.id" index="slide.id" style="height: 480px; background-size:cover; background-position:center;" ng-style="{backgroundImage: 'url('+slide.image+')'}"></div>
-</div>
-</div>
+<jumbotron-slider slides="home.slides"></jumbotron-slider>
 
 <div class="container">
   <p class="intro">
@@ -163,7 +156,7 @@
       <div>
         <h2>Subscribe to our newsletter</h2>
         <p>Lorum ipsum dolor sit amet.</p>
-        
+
         <div class="input-group input-group-lg">
           <input type="text" class="form-control" placeholder="Name @ domain.com">
           <span class="input-group-btn">
@@ -171,7 +164,7 @@
           </span>
         </div>
 
-      </div> 
+      </div>
     </div>
   </div>
 

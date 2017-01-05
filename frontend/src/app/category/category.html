@@ -1,0 +1,183 @@
+<jumbotron-slider slides="category.slides"></jumbotron-slider>
+
+<div class="container">
+
+  <span class="kowicon-k collapsed"></span>
+
+  <h1>Dog articles</h1>
+
+  <h2 ng-click="filterCollapsed = !filterCollapsed" ng-init="filterCollapsed = true" class="advanced-search-toggle">
+    Filter
+    <small>
+      <span class="glyphicon glyphicon-triangle-bottom" ng-hide="filterCollapsed" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-triangle-right" ng-hide="!filterCollapsed" aria-hidden="true"></span>
+    </small>
+  </h2>
+
+  <div uib-collapse="filterCollapsed">
+
+    <h3>By collection</h3>
+    <label class="checkbox-inline" ng-repeat="collection in category.collections">
+      <input type="checkbox" value="{{category}}"> {{category}}
+    </label>
+
+    <h3>Price range</h3>
+    <div class="row">
+      <div class="col-md-6 price-range">
+        <slider ng-model="search.price" range="true" min="0" step="1" tooltip="hide" max="500" value="testOptions.value"></slider>
+      </div>
+
+      <div class="col-md-6">
+        <div class="col-md-5">
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon">&euro;</span>
+            <input type="text" ng-model="search.price[0]" ng-value="search.price[0] | number : 2" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <p class="h4">-</p>
+        </div>
+        <div class="col-md-5">
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon">&euro;</span>
+            <input type="text" ng-model="search.price[1]" ng-value="search.price[0] | number : 2" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end-prive-range-row -->
+
+  </div>
+  <!-- end-filter -->
+
+  <hr>
+
+  <div class="btn-group" uib-dropdown keyboard-nav>
+    <button type="button" class="btn btn-dark" uib-dropdown-toggle>
+      Sort by relevance <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" uib-dropdown-menu role="menu">
+      <li role="menuitem"><a href="#">Price: low to high</a></li>
+      <li role="menuitem"><a href="#">Price: high to low</a></li>
+      <li role="menuitem"><a href="#">Latest</a></li>
+      <li role="menuitem"><a href="#">Oldest</a></li>
+    </ul>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="product">
+        <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          <ul class="colors">
+            <li style="background: white;">White</li>
+            <li style="background: black;">Black</li>
+            <li style="background: blue;">Blue</li>
+          </ul>
+        </div>
+        <div class="information">
+          <a href="#" class="title">
+            Cooling mat
+          </a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue, odio ut aliquam vulputate, lacus velit consequat lorem,
+            at blandit odio justo elementum ipsum. Etiam gravida quam a ex feugiat, et fermentum justo viverra.
+          </p>
+          <span class="price">&euro; 15,49</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="product">
+            <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+              <div class="overlay">
+                <span class="kowicon-product"></span>
+                view details
+              </div>
+              <ul class="colors">
+                <li style="background: white;">White</li>
+                <li style="background: black;">Black</li>
+                <li style="background: blue;">Blue</li>
+              </ul>
+            </div>
+            <div class="information">
+              <a href="#" class="title">
+                Cooling mat
+              </a>
+              <span class="price">&euro; 15,49</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="product">
+            <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+              <div class="overlay">
+                <span class="kowicon-product"></span>
+                view details
+              </div>
+              <ul class="colors">
+                <li style="background: white;">White</li>
+                <li style="background: black;">Black</li>
+                <li style="background: blue;">Blue</li>
+              </ul>
+            </div>
+            <div class="information">
+              <a href="#" class="title">
+                Cooling mat
+              </a>
+              <span class="price">&euro; 15,49</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="product">
+            <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+              <div class="overlay">
+                <span class="kowicon-product"></span>
+                view details
+              </div>
+              <ul class="colors">
+                <li style="background: white;">White</li>
+                <li style="background: black;">Black</li>
+                <li style="background: blue;">Blue</li>
+              </ul>
+            </div>
+            <div class="information">
+              <a href="#" class="title">
+                Cooling mat
+              </a>
+              <span class="price">&euro; 15,49</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="product">
+            <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+              <div class="overlay">
+                <span class="kowicon-product"></span>
+                view details
+              </div>
+              <ul class="colors">
+                <li style="background: white;">White</li>
+                <li style="background: black;">Black</li>
+                <li style="background: blue;">Blue</li>
+              </ul>
+            </div>
+            <div class="information">
+              <a href="#" class="title">
+                Cooling mat
+              </a>
+              <span class="price">&euro; 15,49</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end-container -->

@@ -73,6 +73,7 @@ body {
     right: 40px;
     z-index: 201;
     text-align: center;
+    text-decoration: none;
     font-size: 3em;
     font-weight: normal;
     color: lighten($darkColor, 40);
@@ -84,7 +85,7 @@ body {
       color: lighten($darkColor, 20);
     }
   }
-  
+
   color: $darkColor;
   h1 {
     color: $overlayAccent;
@@ -127,5 +128,6 @@ a {
 @import "general/_product-grid";
 @import "general/_product";
 @import "general/_big-search";
+@import "general/_jumbotron-slider";
 @import "search/_search";
 @import "_faq";
