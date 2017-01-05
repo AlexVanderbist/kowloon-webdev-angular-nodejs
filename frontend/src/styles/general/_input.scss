@@ -37,6 +37,11 @@
     }
   }
 }
+.slider-light {
+  .slider .slider-handle {
+    background-color: white;
+  }
+}
 
 input[type=checkbox] {
   border: 2px solid $darkColor;
@@ -46,6 +51,15 @@ input[type=checkbox] {
 .input-group-lg .input-group-btn .btn {
   border-radius: 0;
   border: 2px solid;
+  &.btn-pink {
+    border-color: $dogColor;
+    background-color: $dogColor;
+    color: white;
+    &:hover {
+      background-color: lighten($dogColor, 5);
+      border-color: lighten($dogColor, 5);
+    }
+  }
   &.btn-dark {
     color: #fff;
     background-color: $darkColor;

@@ -1,0 +1,35 @@
+.filter {
+  .filter-collapse {
+    margin: 0 5%;
+  }
+  .advanced-search-toggle {
+    cursor: pointer;
+  }
+  .slider {
+    margin-top: 7px;
+    margin-bottom: 20px;
+  }
+  .price-range {
+    .input-group {
+      .input-group-addon {
+        background: #fff;
+      }
+      .form-control {
+        border-left: none;
+        text-align: center;
+      }
+    }
+  }
+  &.filter-light {
+    color: white;
+    h2 {
+      font-size: 1.1em;
+      font-family: 'choplin', serif;
+      font-weight: bold;
+      color: white;
+    }
+    h3 {
+      font-size: 1.4em;
+    }
+  }
+}

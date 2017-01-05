@@ -44,6 +44,11 @@
     height: 160px;
     background-size: cover;
     background-position: center;
+
+    img {
+      width: 100%;
+    }
+
     .overlay {
       position: relative;
       color: #fff;
@@ -109,6 +114,30 @@
     }
     .price {
       float: right;
+    }
+  }
+
+  &.product-featured {
+    .image {
+      height: auto;
+    }
+    .information {
+      a.title {
+        font-size: 1.6em;
+      }
+      & > p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+      }
+      .price {
+        float: none;
+      }
+      .btn-more-info {
+        font-weight: bold;
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+      }
     }
   }
 }

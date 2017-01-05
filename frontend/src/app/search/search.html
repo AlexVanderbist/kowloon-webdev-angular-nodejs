@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container search">
   <div class="filter">
     <h2 ng-click="advancedSearchCollapsed = !advancedSearchCollapsed" ng-init="advancedSearchCollapsed = true" class="advanced-search-toggle">
       Advanced filter
@@ -8,7 +8,7 @@
       </small>
     </h2>
 
-    <div uib-collapse="advancedSearchCollapsed">
+    <div class="filter-collapse" uib-collapse="advancedSearchCollapsed">
       <div class="row">
         <div class="col-md-6">
           <h3>Category</h3>
@@ -32,7 +32,7 @@
             <div class="col-md-5">
               <div class="input-group input-group-lg">
                 <span class="input-group-addon">&euro;</span>
-                <input type="text" ng-model="search.price[1]" ng-value="search.price[0] | number : 2" class="form-control">
+                <input type="text" ng-model="search.price[1]" ng-value="search.price[1] | number : 2" class="form-control">
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ angular
     ];
 
     vm.collections = [
-
+      "Splash 'n Fun", "Luxury", "New", "On-sale", "Other"
     ];
 
     function _init() {

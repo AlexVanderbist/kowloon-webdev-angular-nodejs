@@ -1,0 +1,52 @@
+.breadcrumbs {
+  .logo {
+    font-size: 22px;
+    display: block;
+    float: left;
+    margin-right: 4px;
+  }
+  .tag {
+    background: $darkColor;
+    border-radius: 3px 0 0 3px;
+    color: lighten($darkColor, 50);
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 7px 0 17px;
+    position: relative;
+    margin: 0 4px 0 0;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    &.tag-category {
+      padding-left: 27px;
+    }
+  }
+  .tag.tag-category::before {
+    background: $dogColor;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    content: '';
+    height: 10px;
+    left: 13px;
+    position: absolute;
+    width: 10px;
+    top: 6px;
+  }
+  .tag::after {
+    background: #454545;
+    border-bottom: 11px solid transparent;
+    border-right: 10px solid $darkColor;
+    border-top: 11px solid transparent;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .tag:hover {
+    background-color: lighten($darkColor, 3);
+    //color: white;
+  }
+  .tag:hover::after {
+    border-right-color: lighten($darkColor, 3);
+  }
+}
