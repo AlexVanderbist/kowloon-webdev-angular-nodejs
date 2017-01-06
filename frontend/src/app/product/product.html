@@ -1,21 +1,26 @@
 <div class="container product-detail">
-
   <div class="logo-big">
     <img src="images/logo.svg" alt="Kowloon">
   </div>
 
   <div class="row">
     <div class="col-md-6">
-
       <div class="image-gallery">
         <div class="image">
           <div class="expand">
             <div class="kowicon kowicon-plus"></div>
           </div>
-          <img src="images/products/cooling_mat.jpg" alt="Cooling Mat">
+          <img ng-src="{{product.images[activeImage].url}}" ng-init="activeImage = 0" alt="{{product.images[activeImage].title}}">
+        </div>
+        <div class="thumbnails row row-padding-sm">
+          <div class="thumb col-md-4" ng-repeat="image in product.images track by $index" ng-click="$parent.activeImage = $index" ng-class="{'active': $index == $parent.activeImage}">
+            <div class="image">
+              <img ng-src="{{image.url}}" alt="{{image.title}}">
+            </div>
+            <div class="title">{{image.title}}</div>
+          </div>
         </div>
       </div>
-
     </div>
     <div class="col-md-6">
       <section class="breadcrumbs">

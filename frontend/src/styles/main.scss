@@ -132,6 +132,15 @@ a {
   margin: 52px 0 49px 0;
 }
 
+.row-padding-sm {
+  margin-left: -4px;
+  margin-right: -4px;
+  [class*="col-"] {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
 @import "general/_input";
 @import "layout/_sidebar";
 @import "home/_home";
