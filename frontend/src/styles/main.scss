@@ -7,6 +7,7 @@ $backgroundColor: #454545;
 $textColor: #cecece;
 $darkColor: #323232;
 $lightColor: #9a9a9a;
+$lightColor2: #565656;
 
 $sidebarBg: $darkColor;
 $sidebarBgDark: #252525;
@@ -126,6 +127,11 @@ a {
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
+.logo-big {
+  text-align: center;
+  margin: 52px 0 49px 0;
+}
+
 @import "general/_input";
 @import "layout/_sidebar";
 @import "home/_home";
@@ -139,3 +145,4 @@ a {
 @import "general/_newsletter";
 @import "_faq";
 @import "_category";
+@import "_product-detail";

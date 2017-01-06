@@ -1,0 +1,35 @@
+.product-detail {
+  .image-gallery {
+    background-color: $lightColor2;
+    border: 1px solid $lightColor;
+    padding: 6px;
+    .image {
+      position: relative;
+      .expand {
+        height: 41px;
+        width: 41px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        &:before {
+          content: "";
+          display: block;
+          border-left: 41px solid transparent;
+          border-top: 41px solid white;
+          &:hover {
+          }
+        }
+        .kowicon {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          color: $darkColor;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
