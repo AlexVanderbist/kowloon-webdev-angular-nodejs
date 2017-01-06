@@ -18,6 +18,13 @@ Log
 - 01/01/2017: Added newsletter form
 - 01/01/2017: Added FAQ
 - 02/01/2017: Added search
+- 05/01/2017: Added HTML for category view
+- 05/01/2017: Added analytics with page tracking
+- 06/01/2017: Finshed category view, sort of
+- 06/01/2017: Started on product detail view
+- 06/01/2017: Started on express.js back-end
+- 06/01/2017: Added /api with POST /newsletter endpoint
+- 06/01/2017: Hooked up newsletter directive with api
 
 
 
