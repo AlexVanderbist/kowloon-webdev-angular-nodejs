@@ -4,7 +4,8 @@ angular
     'ngTouch',
     'ngAnimate',
     'ui.bootstrap',
-    'ui.bootstrap-slider'
+    'ui.bootstrap-slider',
+    'angular-sly'
   ]);
 
 angular

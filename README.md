@@ -25,6 +25,8 @@ Log
 - 06/01/2017: Started on express.js back-end
 - 06/01/2017: Added /api with POST /newsletter endpoint
 - 06/01/2017: Hooked up newsletter directive with api
+- 06/01/2017: Added favicon and stuff
+- 06/01/2017: Finshed product detail view
 
 
 

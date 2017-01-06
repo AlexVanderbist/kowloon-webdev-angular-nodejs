@@ -27,7 +27,7 @@
 
   <ul class="categories">
     <li class="dogs">
-      <a ui-sref="category" ui-sref-active="active" title="Dogs">
+      <a ui-sref="category" ui-sref-active="active" ng-class="{'active': $state.current.name == 'product'}" title="Dogs">
         <span class="kowicon-dogs"></span>
         Dogs
       </a>
