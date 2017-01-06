@@ -115,6 +115,10 @@ a {
   -ms-transform: scaleX(-1);
 }
 
+.alert {
+  border-radius: 0;
+}
+
 .well {
   border: none;
   border-radius: 0;
@@ -132,5 +136,6 @@ a {
 @import "general/_breadcrumbs";
 @import "search/_search";
 @import "general/_filter";
+@import "general/_newsletter";
 @import "_faq";
 @import "_category";

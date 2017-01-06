@@ -13,9 +13,4 @@ angular
         image: "images/slider/2.jpg"
       }
     ];
-
-    function _init() {
-    }
-
-    _init();
   });
