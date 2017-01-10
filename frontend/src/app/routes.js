@@ -32,5 +32,10 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/product',
       templateUrl: 'app/product/product.html',
       controller: 'ProductController as product'
+    })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'app/about/about.html',
+      controller: 'AboutController as about'
     });
 }
