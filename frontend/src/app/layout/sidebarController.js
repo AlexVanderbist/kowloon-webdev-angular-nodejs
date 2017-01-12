@@ -6,9 +6,9 @@ angular
     vm.menuState = false;
 
     function hidebar() {
-      $timeout(function(){
+      $timeout(function () {
         vm.menuState = false;
-      },300);
+      }, 300);
     }
 
     function init() {

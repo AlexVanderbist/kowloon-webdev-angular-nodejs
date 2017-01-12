@@ -16,9 +16,9 @@
       position: absolute;
       top: 10px;
       margin-left: 20px;
-      @media (max-width: 768px) { 
+      @media (max-width: 768px) {
         font-size: 2em;
-      margin-left: 10px;
+        margin-left: 10px;
       }
       span {
         color: $darkColor;
@@ -28,13 +28,14 @@
     }
     .input-group-addon {
       font-size: 2.2em;
-      @media (max-width: 768px) { 
+      @media (max-width: 768px) {
         font-size: 2em;
       }
     }
     .form-control {
       height: auto;
-      @media (max-width: 768px) { 
+      font-size: 2.8em;
+      @media (max-width: 768px) {
         font-size: 2em;
       }
     }

@@ -5,6 +5,7 @@ To-do
 -----
 
 - Fake infinite scroll
+- Sorting in category
 
 
 Log
