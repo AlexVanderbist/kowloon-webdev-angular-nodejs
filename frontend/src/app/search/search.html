@@ -20,16 +20,16 @@
           <h3>Price range</h3>
           <slider ng-model="search.price" range="true" min="0" step="1" tooltip="hide" max="500" value="testOptions.value"></slider>
           <div class="row">
-            <div class="col-md-5">
+            <div class="col-xs-5">
               <div class="input-group input-group-lg">
                 <span class="input-group-addon">&euro;</span>
                 <input type="text" ng-model="search.price[0]" ng-value="search.price[0] | number : 2" class="form-control">
               </div>
             </div>
-            <div class="col-md-2 text-center">
+            <div class="col-xs-2 text-center">
               <p class="h4">-</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-xs-5">
               <div class="input-group input-group-lg">
                 <span class="input-group-addon">&euro;</span>
                 <input type="text" ng-model="search.price[1]" ng-value="search.price[1] | number : 2" class="form-control">
@@ -46,8 +46,11 @@
       <div class="input-group-addon ">
         <span class="glyphicon glyphicon-search glyph-flipped" aria-hidden="true"></span>
       </div>
-      <div class="placeholder" ng-hide="searchQuery">
+      <div class="placeholder hidden-xs" ng-hide="searchQuery">
         Just start typing and hit <span class="kowicon kowicon-enter"></span> to search
+      </div>
+      <div class="placeholder visible-xs" ng-hide="searchQuery">
+        Type to search
       </div>
       <input type="text" ng-model="searchQuery" autofocus esc-key="$state.go('app')" class="form-control">
     </div>

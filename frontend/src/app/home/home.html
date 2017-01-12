@@ -1,7 +1,7 @@
 <div class="fs-overlay" ng-show="$state.current.name != 'app'">
   <a ui-sref="app" class="overlay-close">
     X
-    <span>esc</span>
+    <span class="hidden-xs">esc</span>
   </a>
   <ui-view autoscroll></ui-view>
 </div>
@@ -16,32 +16,32 @@
   </p>
 
   <div class="row categories">
-    <div class="col-sm-2 col-xs-4">
+    <div class="col-sm-2 col-xs-6">
       <a href="#">
         <span class="kowicon-dogs"></span> Dogs
       </a>
     </div>
-    <div class="col-sm-2 col-xs-4">
+    <div class="col-sm-2 col-xs-6">
       <a href="#">
         <span class="kowicon-cats"></span> Cats
       </a>
     </div>
-    <div class="col-sm-2 col-xs-4">
+    <div class="col-sm-2 col-xs-6">
       <a href="#">
         <span class="kowicon-fish"></span> Fish
       </a>
     </div>
-    <div class="col-sm-2 col-xs-4">
+    <div class="col-sm-2 col-xs-6">
       <a href="#">
         <span class="kowicon-birds"></span> Birds
       </a>
     </div>
-    <div class="col-sm-2 col-xs-4">
+    <div class="col-sm-2 col-xs-6">
       <a href="#">
         <span class="kowicon-small_animals"></span> Small animals
       </a>
     </div>
-    <div class="col-sm-2 col-xs-4">
+    <div class="col-sm-2 col-xs-6">
       <a href="#">
         <span class="kowicon-plus small"></span> Other
       </a>
@@ -50,14 +50,40 @@
 
   <div class="product-grid">
     <h1>Hot items.</h1>
-    <div class="row">
+    <div class="row visible-xs">
+      <div class="col-xs-3">
+        <div class="product">
+          <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          </div>
+        </div>
+      </div> 
+      <div class="col-xs-3">
+        <div class="product">
+          <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          </div>
+        </div>
+      </div> 
+      <div class="col-xs-3">
+        <div class="product">
+          <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          </div>
+        </div>
+      </div> 
+      <div class="col-xs-3">
+        <div class="product">
+          <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="row hidden-xs">
       <div class="col-md-3">
         <div class="product multiple-images">
           <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
-            <div class="overlay">
+            <a ui-sref="product" class="overlay">
               <span class="kowicon-product"></span>
               view details
-            </div>
+            </a>
             <div class="photo-count">
               4
             </div>
@@ -74,10 +100,10 @@
       <div class="col-md-3">
         <div class="product">
           <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
-            <div class="overlay">
+            <a ui-sref="product" class="overlay">
               <span class="kowicon-product"></span>
               view details
-            </div>
+            </a>
             <ul class="colors">
               <li style="background: white;">White</li>
               <li style="background: black;">Black</li>
@@ -96,10 +122,10 @@
       <div class="col-md-3">
         <div class="product">
           <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
-            <div class="overlay">
+            <a ui-sref="product" class="overlay">
               <span class="kowicon-product"></span>
               view details
-            </div>
+            </a>
             <ul class="colors">
               <li style="background: white;">White</li>
               <li style="background: black;">Black</li>
@@ -118,10 +144,10 @@
       <div class="col-md-3">
         <div class="product">
           <div class="image" style="background-image:url('images/products/cooling_mat.jpg')">
-            <div class="overlay">
+            <a ui-sref="product" class="overlay">
               <span class="kowicon-product"></span>
               view details
-            </div>
+            </a>
             <ul class="colors">
               <li style="background: white;">White</li>
               <li style="background: black;">Black</li>

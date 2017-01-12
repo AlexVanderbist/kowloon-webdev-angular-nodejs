@@ -56,6 +56,9 @@ body {
   color: $textColor;
   line-height: 1.7em;
   padding-bottom: 50px;
+  @media (max-width: 768px) { 
+    padding-left: 0;
+  }
 }
 
 .fs-overlay {
@@ -68,6 +71,9 @@ body {
   bottom: 0;
   overflow-y: scroll;
   height: 100%;
+  @media (max-width: 768px) { 
+    left: 0;
+  }
 
   .overlay-close {
     position: absolute;
@@ -79,6 +85,11 @@ body {
     font-size: 3em;
     font-weight: normal;
     color: lighten($darkColor, 40);
+    @media (max-width: 768px) { 
+      top: 15px;
+      right: 15px;
+      font-size: 2.5em;
+    }
     span {
       display: block;
       font-size: 0.5em;
@@ -89,13 +100,13 @@ body {
   }
 
   color: $darkColor;
-  h1 {
+  h1, .h1 {
     color: $overlayAccent;
     text-transform: uppercase;
   }
 }
 
-h1 {
+h1, .h1 {
   font-family: 'choplin', serif;
   font-weight: bold;
   color: #fff;
@@ -153,6 +164,9 @@ a {
     &:hover {
       text-decoration: none;
     }
+  }
+  @media (max-width: 768px) { 
+    text-align: left;
   }
 }
 

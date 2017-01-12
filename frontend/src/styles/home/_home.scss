@@ -1,8 +1,19 @@
+.visible-xs {
+  .product .image {
+    height: 60px;
+  }
+}
+
 p.intro {
   text-align: center;
   padding-left: 14%;
   padding-right: 14%;
   margin-bottom: 40px;
+  @media (max-width: 768px) { 
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .categories {
@@ -42,5 +53,8 @@ p.intro {
       height: 80%;
       width: 1px;
     }
+  }
+  div:last-child>a:after {
+    background-color: transparent;
   }
 }

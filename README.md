@@ -1,9 +1,10 @@
 WebDev: Kowloon Examen
 ======================
 
+To-do
+-----
 
-Best practices from:
-https://github.com/AlexVanderbist/kowloon-webdev-angular-nodejs.git
+- Fake infinite scroll
 
 
 Log
@@ -27,6 +28,7 @@ Log
 - 06/01/2017: Hooked up newsletter directive with api
 - 06/01/2017: Added favicon and stuff
 - 06/01/2017: Finshed product detail view
+- 12/01/2017: Started on mobile styling
 
 
 

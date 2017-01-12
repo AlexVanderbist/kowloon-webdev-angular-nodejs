@@ -1,5 +1,6 @@
 <div class="container faq">
-  <h1>Frequently asked questions</h1>
+  <h1 class="hidden-xs">Frequently asked questions</h1>
+  <span class="h1 visible-xs">FAQ</span>
 
   <div class="big-search big-search-dark">
     <div class="input-group input-group-lg search">
@@ -7,7 +8,7 @@
         <span class="glyphicon glyphicon-search glyph-flipped" aria-hidden="true"></span>
       </div>
       <div class="placeholder" ng-hide="searchQuery">
-        Search on keyword <span class="kowicon kowicon-enter"></span>
+        Search on keyword <span class="kowicon kowicon-enter hidden-xs"></span>
       </div>
       <input type="text" ng-model="searchQuery" autofocus esc-key="$state.go('app')" class="form-control">
     </div>

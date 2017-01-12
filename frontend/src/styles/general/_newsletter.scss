@@ -2,15 +2,26 @@
   display: flex;
   margin-left: 0;
   margin-right: 0;
+  
+  @media (max-width: 768px) { 
+    flex-direction: column;
+  }
 
   .bg {
     background: url(../images/bg1.jpg) repeat;
     text-align: center;
     padding: 0 200px;
+    @media (max-width: 768px) { 
+      padding: 0 15px;
+    }
     h1 {
       font-family: 'choplin', serif;
       font-size: 3em;
       margin: 35px 0 8px 0;
+      @media (max-width: 768px) { 
+        font-size: 2em;
+      }
+
       span {
         display:block;
         font-size: 0.5em;
@@ -23,6 +34,10 @@
     background-color: #5f5f5f;
     display: flex;
     align-items: center;
+    @media (max-width: 768px) { 
+      padding: 20px 15px;
+    }
+
     input.form-control {
       border-right: none;
     }

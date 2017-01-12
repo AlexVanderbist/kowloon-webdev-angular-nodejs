@@ -40,51 +40,71 @@ angular
       {
         name: "Cooling mat none",
         price: 25.49,
+        multipleImages: true,
+        colors: false,
         collection: []
       },
       {
         name: "Cooling mat snf",
         price: 15.49,
+        multipleImages: true,
+        colors: false,
         collection: ["Splash 'n Fun"]
       },
       {
         name: "Cooling mat snf lux",
         price: 33.49,
+        multipleImages: true,
+        colors: false,
         collection: ["Splash 'n Fun", "Luxury"]
       },
       {
         name: "Cooling mat",
         price: 75.49,
+        multipleImages: false,
+        colors: true,
         collection: ["New", "On-sale", "Other"]
       },
       {
         name: "Cooling mat new sale",
         price: 59.49,
+        multipleImages: true,
+        colors: false,
         collection: ["New", "On-sale"]
       },
       {
         name: "Cooling mat new other",
         price: 405.49,
+        multipleImages: false,
+        colors: true,
         collection: ["Luxury", "New", "Other"]
       },
       {
         name: "New Cooling mat Lux on sale",
         price: 122.49,
+        multipleImages: false,
+        colors: true,
         collection: ["Luxury", "New", "On-sale", "Other"]
       },
       {
         name: "Cooling mat other",
         price: 154.49,
+        multipleImages: true,
+        colors: false,
         collection: ["Other"]
       },
       {
         name: "Cooling mat",
         price: 115.49,
+        multipleImages: false,
+        colors: true,
         collection: ["Splash 'n Fun", "Luxury", "New", "On-sale", "Other"]
       },
       {
         name: "Cooling mat",
         price: 125.49,
+        multipleImages: false,
+        colors: true,
         collection: ["Splash 'n Fun", "Luxury", "New", "On-sale", "Other"]
       }
     ];

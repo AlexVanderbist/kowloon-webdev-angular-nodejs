@@ -1,3 +1,26 @@
+
+a.toggle-icon {
+  display: block;
+  height: 52px;
+  width: $sidebarWidth;
+  background-color: $sidebarBgDark;
+  outline: 0;
+  color: white;
+  text-align: center;
+  font-size: 27px;
+  z-index: 180;
+  &.toggle-icon-mobile {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+  }
+  span {
+    line-height: 60px;
+  }
+}
+
 nav.sidebar {
   z-index: 200;
   position: fixed;
@@ -19,19 +42,6 @@ nav.sidebar {
     transition: width 300ms;
     .collapsed {
       display: none;
-    }
-  }
-  a#toggle-icon {
-    display: block;
-    height: 52px;
-    width: $sidebarWidth;
-    background-color: $sidebarBgDark;
-    outline: 0;
-    color: white;
-    text-align: center;
-    font-size: 27px;
-    span {
-      line-height: 60px;
     }
   }
   a#logo-icon {
@@ -118,6 +128,17 @@ nav.sidebar {
           line-height: 60px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 768px) { 
+  a.toggle-icon.toggle-icon-mobile {
+    display: block;
+  }
+  nav.sidebar {
+    &.sidebar-menu-collapsed {
+      width: 0px;
     }
   }
 }
