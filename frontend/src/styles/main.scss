@@ -2,213 +2,25 @@
 
 @import "_kowloon-icons";
 @import "_fonts";
+@import "_variables";
+@import "_general-bootstrap"; // Overrides for Bootstrap components
+@import "_general";
 
-$backgroundColor: #454545;
-$textColor: #cecece;
-$darkColor: #323232;
-$lightColor: #9a9a9a;
-$lightColor2: #565656;
-$lightColor3: #717171;
+@import "components/_input";
+@import "components/_horizontal-slider";
+@import "components/_product-grid";
+@import "components/_product";
+@import "components/_big-search";
+@import "components/_jumbotron-slider";
+@import "components/_breadcrumbs";
+@import "components/_filter";
+@import "components/_newsletter";
+@import "components/_sidebar";
+@import "components/overlay";
 
-$sidebarBg: $darkColor;
-$sidebarBgDark: #252525;
-$sidebarInactive: #a2a2a2;
-$sidebarActive: #ededed;
-$sidebarActiveDark: #363636;
-
-$overlayBg: #fff;
-$overlayAccent: #e27500;
-
-$dogColor: #ff6f9e;
-$catColor: #8787ff;
-$fishColor: #ffb93f;
-$owlColor: #7bff81;
-$mouseColor: #7be5ff;
-$otherColor: #de6262;
-
-$categories: dogs, cats, fish, birds, small_animals, other;
-$category_colors: $dogColor, $catColor, $fishColor, $owlColor, $mouseColor, $otherColor;
-
-$i: 1;
-@each $class in $categories {
-  .kowicon-#{$class} {
-    color: nth($category_colors, $i);
-  }
-  $i: $i+1;
-}
-
-$sidebarWidth: 60px;
-$sidebarExpandedWidth: 217px;
-$sidebarMenuItemHeight: 52px;
-
-
-body, html {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  background-color: $backgroundColor;
-  padding-left: $sidebarWidth;
-  color: $textColor;
-  line-height: 1.7em;
-  padding-bottom: 50px;
-  @media (max-width: 768px) { 
-    padding-left: 0;
-  }
-}
-
-.fs-overlay {
-  z-index: 199;
-  background-color: transparentize($overlayBg, 0.05);
-  position: fixed;
-  top: 0;
-  left: $sidebarWidth;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  height: 100%;
-  @media (max-width: 768px) { 
-    left: 0;
-  }
-
-  .overlay-close {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    z-index: 201;
-    text-align: center;
-    text-decoration: none;
-    font-size: 3em;
-    font-weight: normal;
-    color: lighten($darkColor, 40);
-    @media (max-width: 768px) { 
-      top: 15px;
-      right: 15px;
-      font-size: 2.5em;
-    }
-    span {
-      display: block;
-      font-size: 0.5em;
-    }
-    &:hover {
-      color: lighten($darkColor, 20);
-    }
-  }
-
-  color: $darkColor;
-  h1, .h1 {
-    color: $overlayAccent;
-    text-transform: uppercase;
-  }
-}
-
-h1, .h1 {
-  font-family: 'choplin', serif;
-  font-weight: bold;
-  color: #fff;
-}
-
-a {
-  text-decoration: underline;
-  color: inherit;
-  &:hover {
-    text-decoration: none;
-    color: inherit;
-  }
-}
-
-.glyph-flipped {
-  transform: scaleX(-1);
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-}
-
-.alert {
-  border-radius: 0;
-}
-
-.well {
-  border: none;
-  border-radius: 0;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
-}
-
-.logo-big {
-  text-align: center;
-  margin: 52px 0 49px 0;
-}
-
-.row-padding-sm {
-  margin-left: -4px;
-  margin-right: -4px;
-  [class*="col-"] {
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-}
-
-.bottom-links {
-  margin: 5px 0 30px 0;
-  text-align: right;
-  font-weight: bold;
-  font-family: 'choplin', serif;
-  a {
-    text-decoration: underline;
-    color: #e8e8e8;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-  @media (max-width: 768px) { 
-    text-align: left;
-  }
-}
-
-.panel-group .panel,
-.panel {
-  border-radius: 0;
-  border: none;
-  &.panel-dark {
-    background-color: $lightColor3;
-    & > .panel-heading {
-      color: white;
-      background-color: $lightColor3;
-      padding: 15px;
-      .panel-title {
-          font-size: 18px;
-          font-weight: bold;
-      }
-      .accordion-toggle {
-        text-decoration: none;
-      }
-    }
-    .panel-body {
-      border-top-color: $lightColor3;
-      padding-left: 40px;
-      padding-top: 0;
-    }
-  }
-}
-
-@import "general/_input";
-@import "layout/_sidebar";
-@import "home/_home";
-@import "general/_product-grid";
-@import "general/_product";
-@import "general/_big-search";
-@import "general/_jumbotron-slider";
-@import "general/_breadcrumbs";
-@import "search/_search";
-@import "general/_filter";
-@import "general/_newsletter";
-@import "_faq";
-@import "_category";
-@import "_about";
-@import "general/_horizontal-slider";
-@import "_product-detail";
+@import "pages/_home";
+@import "pages/_search";
+@import "pages/_faq";
+@import "pages/_category";
+@import "pages/_about";
+@import "pages/_product-detail";

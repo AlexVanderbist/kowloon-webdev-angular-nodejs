@@ -1,0 +1,44 @@
+.fs-overlay {
+  z-index: 199;
+  background-color: transparentize($overlayBg, 0.05);
+  position: fixed;
+  top: 0;
+  left: $sidebarWidth;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  height: 100%;
+  @media (max-width: 768px) { 
+    left: 0;
+  }
+
+  .overlay-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 201;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3em;
+    font-weight: normal;
+    color: lighten($darkColor, 40);
+    @media (max-width: 768px) { 
+      top: 15px;
+      right: 15px;
+      font-size: 2.5em;
+    }
+    span {
+      display: block;
+      font-size: 0.5em;
+    }
+    &:hover {
+      color: lighten($darkColor, 20);
+    }
+  }
+
+  color: $darkColor;
+  h1, .h1 {
+    color: $overlayAccent;
+    text-transform: uppercase;
+  }
+}
