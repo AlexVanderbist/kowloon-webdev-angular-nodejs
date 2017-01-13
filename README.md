@@ -1,6 +1,13 @@
 WebDev: Kowloon Examen
 ======================
 
+Running from C9
+---------------
+
+- Start MongoDB `cd ~; ./mongod;`
+- Start Express.js via C9 run config
+
+
 To-do
 -----
 
@@ -40,7 +47,7 @@ Installation
 Execute the following command to get the latest version of some required packages:
 
 ```terminal
-npm install --no-bin-links
+npm install [--no-bin-links]
 ```
 
 The `--no-bin-links` flag might be necessary because symlinks don't exist on Windows.
