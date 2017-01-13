@@ -1,0 +1,26 @@
+.container.about-container {
+  padding-top: 15px;
+  color: white;
+  h2 {
+    font-family: 'choplin', serif;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+  ul {
+    padding-left: 1em;
+  }
+  .contact-box {
+    border-left: 1px solid $lightColor2;
+    border-bottom: 1px solid $lightColor2;
+    padding: 0 0 5px 15px;
+  }
+  .contact-form {
+    margin-top: 80px;
+  }
+  .about-faq {
+    margin-top: 80px;
+    .panel-group {
+      margin-top: 20px;
+    }
+  }
+}

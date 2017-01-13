@@ -1,0 +1,57 @@
+<jumbotron-slider slides="about.slides"></jumbotron-slider>
+<div class="container about-container">
+  <section class="breadcrumbs">
+    <a class="logo kowicon-k"></a>
+    <a class="tag">About us</a>
+  </section>
+  <h1 class="text-uppercase">About us</h1>
+  <div class="row">
+    <div class="col-md-9">
+      <h2 class="text-uppercase">Kowloon</h2>
+      <p>Pet Concept, active since 1998, is developing, importing and exporting products for pets worldwide.</p>
+      <p>natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+        veritatis et quasi architecto beatae vitae sequi nesciunt.</p>
+      <form class="contact-form">
+        <h2 class="text-uppercase">Leave us a message</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" placeholder="name@domain.com">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Your message</label>
+          <textarea class="form-control" rows="5" id="message">Write your own message here.</textarea>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <button type="submit" class="btn  btn-block btn-lg btn-pink">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+      <div class="contact-box">
+        <h2 class="text-uppercase">Contact</h2>
+        <ul>
+          <li>Deckx Johan</li>
+          <li>Bosdreef 7</li>
+          <li>2020 Herentals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="about-faq">
+    <h2 class="text-uppercase">Frequently asked question</h2>
+    <uib-accordion>
+      <div uib-accordion-group class="panel-dark" is-open="status[$index].open" ng-repeat="faq in about.faq track by $index">
+        <uib-accordion-heading>
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-triangle-bottom': status[$index].open, 'glyphicon-triangle-right': !status[$index].open}"></i>          {{faq.question}}
+        </uib-accordion-heading>
+        {{faq.answer}}
+      </div>
+    </uib-accordion>
+  </div>
+</div>

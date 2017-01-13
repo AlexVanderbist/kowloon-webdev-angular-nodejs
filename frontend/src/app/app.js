@@ -4,7 +4,8 @@ angular
     'ngTouch',
     'ngAnimate',
     'ui.bootstrap',
-    'ui.bootstrap-slider'
+    'ui.bootstrap-slider',
+    'angular-sly'
   ]);
 
 angular
@@ -20,17 +21,6 @@ angular
     $rootScope.$on('$stateChangeSuccess', function (event) {
       $window.ga('send', 'pageview', $location.path());
     });
-
-    // Catch statechange to hide scrollbars when overlay is active
-    $rootScope.$on('$stateChangeStart',
-      function (event, toState) {
-        if (toState.name.includes('app.')) {
-          // tostate is child of home
-          angular.element(document).find('body').css('overflow', 'hidden');
-        } else {
-          angular.element(document).find('body').css('overflow', 'visible');
-        }
-      });
   });
 
 angular.module('app')

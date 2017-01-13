@@ -3,6 +3,6 @@
     <img src="images/logo.svg" alt="Kowloon">
   </div>
   <div uib-carousel active="true" interval="5000">
-    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id" style="height: 480px; background-size:cover; background-position:center;" ng-style="{backgroundImage: 'url('+slide.image+')'}"></div>
+    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id" class="slider-slide" ng-style="{backgroundImage: 'url('+slide.image+')'}"></div>
 </div>
 </div>

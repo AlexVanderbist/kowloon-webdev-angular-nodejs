@@ -1,6 +1,9 @@
 .filter {
   .filter-collapse {
     margin: 0 5%;
+    @media (max-width: 768px) { 
+      margin: 0 0;
+    }
   }
   .advanced-search-toggle {
     cursor: pointer;

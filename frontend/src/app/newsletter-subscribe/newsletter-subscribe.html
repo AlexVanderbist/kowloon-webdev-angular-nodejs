@@ -1,0 +1,29 @@
+<div class="row newsletter">
+  <div class="col-md-8 bg">
+    <h1>
+      discover amazing Kowloon deals!
+      <span>
+        only in our newsletter
+      </span>
+    </h1>
+  </div>
+  <div class="col-md-4 form">
+    <div>
+      <h2>Subscribe to our newsletter</h2>
+      <p>Lorum ipsum dolor sit amet.</p>
+      <div class="alert alert-warning" ng-show="error && !success">
+        <button type="button" class="close" ng-click="error = null" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{error}}
+      </div>
+      <div class="alert alert-success" ng-show="success">Thank you! You've been subscribed to the newsletter.</div>
+      <form ng-submit="subscribe(email)" ng-hide="success">
+        <div class="input-group input-group-lg">
+          <input type="email" required class="form-control" ng-model="email" placeholder="Name @ domain.com">
+          <span class="input-group-btn">
+            <button class="btn btn-dark" type="submit">OK</button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

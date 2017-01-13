@@ -1,36 +1,112 @@
-<div class="container product-container">
+<div class="container product-detail">
+  <div class="logo-big">
+    <img src="images/logo.svg" alt="Kowloon">
+  </div>
+
   <div class="row">
-    <div class="col-md-6">
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-md-push-6">
       <section class="breadcrumbs">
         <a class="logo kowicon-k"></a>
         <a class="tag tag-category">Dogs</a>
-        <a class="tag">Splash 'n Fun</span>
+        <a class="tag">Splash 'n Fun</a>
       </section>
 
       <h1 class="text-uppercase">Cooling mat</h1>
 
-      <h2>&euro; 15,49</h2>
+      <span class="price">&euro; 15,49</span>
 
-      <h3>Colors</h3>
+      <h2>Colors</h2>
+      <ul class="colors">
+        <li style="background: white;">White</li>
+        <li style="background: black;">Black</li>
+        <li style="background: blue;">Blue</li>
+      </ul>
 
-      <h3>Description</h3>
+      <h2>Description</h2>
       <p>Hier komt een de volledige beschrijvende tekst met een max. aantal karakters. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea clit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat consectetur.</p>
+    </div>
+    <div class="col-md-6 col-md-pull-6">
+      <div class="image-gallery">
+        <div class="image">
+          <div class="expand">
+            <div class="kowicon kowicon-plus"></div>
+          </div>
+          <img ng-src="{{product.images[activeImage].url}}" ng-init="activeImage = 0" alt="{{product.images[activeImage].title}}">
+        </div>
+        <div class="thumbnails row row-padding-sm">
+          <div class="thumb col-xs-4" ng-repeat="image in product.images track by $index" ng-click="$parent.activeImage = $index" ng-class="{'active': $index == $parent.activeImage}">
+            <div class="image">
+              <img ng-src="{{image.url}}" alt="{{image.title}}">
+            </div>
+            <div class="title hidden-xs">{{image.title}}</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <hr>
+  <div class="specifications">
+    <h2>Specifications</h2>
 
-  <h3>Specifications</h3>
+    <h3 class="text-uppercase">Dimensions</h3>
+    <p>
+      <span><strong>S</strong> - &empty; 53x18cm</span>
+      <span><strong>M</strong> - &empty; 53x18cm</span>
+      <span><strong>L</strong> - &empty; 53x18cm</span>
+    </p>
 
-  <h4 class="text-uppercase">Dimensions</h4>
+    <h3 class="text-uppercase">Title</h3>
+    <p>
+      <span><strong>S</strong> - hier komt technische tekst</span>
+    </p>
 
-  <h4 class="text-uppercase">Title</h4>
-
-  <hr>
+  </div>
 
   <div class="related-products">
     <h2 class="text-uppercase">Related products</h2>
+
+    <div class="slider">
+      <div class="frame" id="relatedSly" >
+        <div class="slidee">
+          <div class="slide product" ng-repeat="related in product.relatedProducts" sly-horizontal-repeat>
+            <div class="image" ng-style="{backgroundImage: 'url('+related.url+')'}">
+              <div class="overlay">
+                <span class="kowicon-product"></span>
+                view details
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="prevPage"><span class="kowicon kowicon-prev"></span></button>
+        <button class="nextPage"><span class="kowicon kowicon-next"></span></button>
+      </div>
+    </div>
+
+    <div class="bottom-links">
+      <a href="#">view more</a>
+    </div>
   </div>
+
+  <div class="product-faq">
+
+    <uib-accordion>
+      <div uib-accordion-group class="panel-dark" is-open="status[$index].open" ng-repeat="faq in product.faq track by $index">
+        <uib-accordion-heading>
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-triangle-bottom': status[$index].open, 'glyphicon-triangle-right': !status[$index].open}"></i>
+          {{faq.question}}
+        </uib-accordion-heading>
+        {{faq.answer}}
+      </div>
+    </uib-accordion>
+
+    <div class="bottom-links">
+      <a href="#">More questions?</a>
+    </div>
+  </div>
+
+  <newsletter-subscribe></newsletter-subscribe>
+
 </div>
