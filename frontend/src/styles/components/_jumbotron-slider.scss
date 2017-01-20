@@ -1,0 +1,52 @@
+.carousel {
+  .slider-slide {
+    height: 480px;
+    background-size: cover;
+    background-position: center;
+    @media (max-width: 768px) { 
+      height: 230px;
+    }
+  }
+  z-index: 0;
+  >.left,
+  >.right {
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+  &:hover {
+    >.left,
+    >.right {
+      opacity: 1;
+    }
+  }
+  .carousel-indicators {
+    li,
+    li.active {
+      margin: 1px 5px;
+      border: 2px solid #cecece;
+      background-color: #fff;
+      height: 12px;
+      width: 12px;
+      &.active {
+        background-color: #323232;
+      }
+    }
+  }
+}
+
+.jumbotron {
+  position: relative;
+  padding: 0;
+  .logo {
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;    
+    @media (max-width: 768px) { 
+      img {
+        width: 60%;
+      }
+    }
+  }
+}

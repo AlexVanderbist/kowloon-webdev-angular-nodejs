@@ -1,0 +1,145 @@
+.product {
+  a {text-decoration: none;}
+  position: relative;
+  cursor: pointer;
+  padding: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #717171;
+  background-color: #565656;
+  overflow: hidden;
+  &:hover {
+    .image .overlay {
+      opacity: 1;
+    }
+  }
+  &.multiple-images {
+    margin-right: 15px;
+    margin-bottom: 30px;
+    top: 15px;
+    outline: 3px solid #454545;
+    &:before,
+    &:after {
+      content: "";
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      background: red;
+      outline: 3px solid #454545;
+    }
+    &:before {
+      right: -15px;
+      top: -15px;
+      background-color: #cfcfcf;
+    }
+    &:after {
+      right: -8px;
+      top: -8px;
+      background-color: #818181;
+    }
+    .image {
+      height: 145px;
+    }
+  }
+  .image {
+    position: relative;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+
+    img {
+      width: 100%;
+    }
+
+    .overlay {
+      position: relative;
+      color: #fff;
+      z-index: 100;
+      height: 100%;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($dogColor, 0.8);
+      text-align: center;
+      transition: opacity 400ms;
+      font-size: 1.4em;
+      span {
+        font-size: 3.1em;
+        display: block;
+        padding-bottom: 4px;
+      }
+    }
+    .photo-count {
+      position: absolute;
+      z-index: 99;
+      top: 10px;
+      left: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 100%;
+      background-color: #fff;
+      color: #454545;
+      text-align: center;
+      line-height: 1.8em;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+    .colors {
+      position: absolute;
+      z-index: 99;
+      top: 10px;
+      left: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        float: left;
+        height: 16px;
+        width: 16px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+        text-indent: 1000px;
+        overflow: hidden;
+        margin-right: 4px;
+      }
+    }
+  }
+  .information {
+    font-size: 1.1em;
+    margin: 7px 7px 0px 7px;
+    color: white;
+    a.title {
+      font-weight: bold;
+      color: inherit;
+    }
+    .price {
+      float: right;
+    }
+  }
+
+  &.product-featured {
+    .image {
+      height: auto;
+    }
+    .information {
+      a.title {
+        font-size: 1.6em;
+      }
+      & > p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+      }
+      .price {
+        float: none;
+      }
+      .btn-more-info {
+        font-weight: bold;
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+      }
+    }
+  }
+}

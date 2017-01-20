@@ -1,0 +1,29 @@
+$backgroundColor: #454545;
+$textColor: #cecece;
+$darkColor: #323232;
+$lightColor: #9a9a9a;
+$lightColor2: #565656;
+$lightColor3: #717171;
+
+$sidebarBg: $darkColor;
+$sidebarBgDark: #252525;
+$sidebarInactive: #a2a2a2;
+$sidebarActive: #ededed;
+$sidebarActiveDark: #363636;
+
+$overlayBg: #fff;
+$overlayAccent: #e27500;
+
+$dogColor: #ff6f9e;
+$catColor: #8787ff;
+$fishColor: #ffb93f;
+$owlColor: #7bff81;
+$mouseColor: #7be5ff;
+$otherColor: #de6262;
+
+$categories: dogs, cats, fish, birds, small_animals, other;
+$category_colors: $dogColor, $catColor, $fishColor, $owlColor, $mouseColor, $otherColor;
+
+$sidebarWidth: 60px;
+$sidebarExpandedWidth: 217px;
+$sidebarMenuItemHeight: 52px;

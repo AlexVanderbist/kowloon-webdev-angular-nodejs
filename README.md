@@ -1,6 +1,18 @@
 WebDev: Kowloon Examen
 ======================
 
+Running from C9
+---------------
+
+- Start MongoDB `cd ~; ./mongod;`
+- Start Express.js via C9 run config
+
+
+To-do
+-----
+
+- Fake infinite scroll
+
 
 Log
 ---
@@ -22,7 +34,12 @@ Log
 - 06/01/2017: Added /api with POST /newsletter endpoint
 - 06/01/2017: Hooked up newsletter directive with api
 - 06/01/2017: Added favicon and stuff
+<<<<<<< HEAD
 - 07/01/2017: Finshed product detail view
+=======
+- 06/01/2017: Finshed product detail view
+- 12/01/2017: Started on mobile styling
+>>>>>>> 0e20c017bd110cdf8fac1829b4fd37e38a68d5fb
 
 
 
@@ -34,7 +51,7 @@ Installation
 Execute the following command to get the latest version of some required packages:
 
 ```terminal
-npm install --no-bin-links
+npm install [--no-bin-links]
 ```
 
 The `--no-bin-links` flag might be necessary because symlinks don't exist on Windows.

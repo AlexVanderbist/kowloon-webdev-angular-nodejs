@@ -4,29 +4,11 @@
   </div>
 
   <div class="row">
-    <div class="col-md-6">
-      <div class="image-gallery">
-        <div class="image">
-          <div class="expand">
-            <div class="kowicon kowicon-plus"></div>
-          </div>
-          <img ng-src="{{product.images[activeImage].url}}" ng-init="activeImage = 0" alt="{{product.images[activeImage].title}}">
-        </div>
-        <div class="thumbnails row row-padding-sm">
-          <div class="thumb col-md-4" ng-repeat="image in product.images track by $index" ng-click="$parent.activeImage = $index" ng-class="{'active': $index == $parent.activeImage}">
-            <div class="image">
-              <img ng-src="{{image.url}}" alt="{{image.title}}">
-            </div>
-            <div class="title">{{image.title}}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-6 col-md-push-6">
       <section class="breadcrumbs">
         <a class="logo kowicon-k"></a>
         <a class="tag tag-category">Dogs</a>
-        <a class="tag">Splash 'n Fun</span>
+        <a class="tag">Splash 'n Fun</a>
       </section>
 
       <h1 class="text-uppercase">Cooling mat</h1>
@@ -42,6 +24,24 @@
 
       <h2>Description</h2>
       <p>Hier komt een de volledige beschrijvende tekst met een max. aantal karakters. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea clit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat consectetur.</p>
+    </div>
+    <div class="col-md-6 col-md-pull-6">
+      <div class="image-gallery">
+        <div class="image">
+          <div class="expand">
+            <div class="kowicon kowicon-plus"></div>
+          </div>
+          <img ng-src="{{product.images[activeImage].url}}" ng-init="activeImage = 0" alt="{{product.images[activeImage].title}}">
+        </div>
+        <div class="thumbnails row row-padding-sm">
+          <div class="thumb col-xs-4" ng-repeat="image in product.images track by $index" ng-click="$parent.activeImage = $index" ng-class="{'active': $index == $parent.activeImage}">
+            <div class="image">
+              <img ng-src="{{image.url}}" alt="{{image.title}}">
+            </div>
+            <div class="title hidden-xs">{{image.title}}</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -92,7 +92,7 @@
 
   <div class="product-faq">
 
-  <uib-accordion>
+    <uib-accordion>
       <div uib-accordion-group class="panel-dark" is-open="status[$index].open" ng-repeat="faq in product.faq track by $index">
         <uib-accordion-heading>
           <i class="pull-right glyphicon" ng-class="{'glyphicon-triangle-bottom': status[$index].open, 'glyphicon-triangle-right': !status[$index].open}"></i>

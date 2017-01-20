@@ -2,7 +2,15 @@ var express = require('express');
 var Subscriber = require('../models/subscriber');
 var router = express.Router();
 
-/* GET home page. */
+/* CORS middleware */
+router.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
+/* POST new subscriber. */
 router.post('/newsletter', function(req, res, next) {
     if (!req.body.email) return res.status(400).send("No email provided");
 
@@ -24,9 +32,10 @@ router.post('/newsletter', function(req, res, next) {
     Subscriber.find({
         email: req.body.email
     }, function(err, existing) {
+        
         if (err) return res.status(500).send('Something went wrong saving the sub');
 
-        if(existing) return res.status(409).send('This subscriber already exists');
+        if(existing.length) return res.status(409).send('This subscriber already exists');
         
         sub.save(function(err) {
             if (err) return res.status(500).send('Something went wrong saving the sub');

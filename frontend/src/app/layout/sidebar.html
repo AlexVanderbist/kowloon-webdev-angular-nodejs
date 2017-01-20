@@ -1,71 +1,78 @@
-<nav class="sidebar" ng-init="menuState = 0" ng-class="menuState ? 'sidebar-menu-expanded' : 'sidebar-menu-collapsed'">
-  <a href="#" id="toggle-icon" ng-click="menuState = !menuState">
+<div ng-controller="SidebarController as sidebar">
+  <!-- Toggle icon outside of main <nav> so mobile doesnt hide it -->
+  <a href="#" class="toggle-icon toggle-icon-mobile" ng-click="sidebar.menuState = !sidebar.menuState">
     <span class="kowicon-menu"></span>
   </a>
-  <ul class="main">
-    <li>
-      <a ui-sref="app.search" ui-sref-active="active" title="Search">
-        <span class="kowicon-search"></span>
-        Search
-      </a>
-    </li>
-    <li>
-      <a ui-sref="app.faq" ui-sref-active="active" title="FAQ">
-        <span class="kowicon-faq"></span>
-        FAQ
-      </a>
-    </li>
-    <li class="divider"></li>
-    <li>
-      <a href="#" title="About" ui-sref="about" ui-sref-active="active">
-        <span class="kowicon-contact"></span>
-        About us
-      </a>
-    </li>
-    <li class="divider"></li>
-  </ul>
+  <nav class="sidebar" ng-class="sidebar.menuState ? 'sidebar-menu-expanded' : 'sidebar-menu-collapsed'">
+    <a href="#" class="toggle-icon" ng-click="sidebar.menuState = !sidebar.menuState">
+      <span class="kowicon-menu"></span>
+    </a>
+    <ul class="main">
+      <li>
+        <a ui-sref="app.search" ui-sref-active="active" title="Search">
+          <span class="kowicon-search"></span>
+          Search
+        </a>
+      </li>
+      <li>
+        <a ui-sref="app.faq" ui-sref-active="active" title="FAQ">
+          <span class="kowicon-faq"></span>
+          FAQ
+        </a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="#" title="About" ui-sref="about" ui-sref-active="active">
+          <span class="kowicon-contact"></span>
+          About us
+        </a>
+      </li>
+      <li class="divider"></li>
+    </ul>
 
-  <ul class="categories">
-    <li class="dogs">
-      <a ui-sref="category" ui-sref-active="active" ng-class="{'active': $state.current.name == 'product'}" title="Dogs">
-        <span class="kowicon-dogs"></span>
-        Dogs
-      </a>
-    </li>
-    <li class="cats">
-      <a href="#" title="Cats">
-        <span class="kowicon-cats"></span>
-        Cats
-      </a>
-    </li>
-    <li class="fish">
-      <a href="#" title="Fish">
-        <span class="kowicon-fish"></span>
-        Fish
-      </a>
-    </li>
-    <li class="birds">
-      <a href="#" title="Birds">
-        <span class="kowicon-birds"></span>
-        Birds
-      </a>
-    </li>
-    <li class="small_animals">
-      <a href="#" title="Small animals">
-        <span class="kowicon-small_animals"></span>
-        Small animals
-      </a>
-    </li>
-    <li class="other">
-      <a href="#" title="Other">
-        <span class="kowicon-plus"></span>
-        Other
-      </a>
-    </li>
-  </ul>
+    <ul class="categories">
+      <li class="dogs">
+        <a ui-sref="category" ui-sref-active="active" ng-class="{'active': $state.current.name == 'product'}" title="Dogs">
+          <span class="kowicon-dogs"></span>
+          Dogs
+        </a>
+      </li>
+      <li class="cats">
+        <a href="#" title="Cats">
+          <span class="kowicon-cats"></span>
+          Cats
+        </a>
+      </li>
+      <li class="fish">
+        <a href="#" title="Fish">
+          <span class="kowicon-fish"></span>
+          Fish
+        </a>
+      </li>
+      <li class="birds">
+        <a href="#" title="Birds">
+          <span class="kowicon-birds"></span>
+          Birds
+        </a>
+      </li>
+      <li class="small_animals">
+        <a href="#" title="Small animals">
+          <span class="kowicon-small_animals"></span>
+          Small animals
+        </a>
+      </li>
+      <li class="other">
+        <a href="#" title="Other">
+          <span class="kowicon-plus"></span>
+          Other
+        </a>
+      </li>
+    </ul>
 
-  <a ui-sref="app" id="logo-icon" title="Home">
-    <span class="kowicon-k collapsed"></span>
-    <img src="images/logo-sm.svg" class="expanded" alt="">
-  </a>
-</nav>
+    <a ui-sref="app" id="logo-icon" title="Home">
+      <span class="kowicon-k collapsed"></span>
+      <img src="images/logo-sm.svg" class="expanded" alt="">
+    </a>
+  </nav>
+
+</div>
